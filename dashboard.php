@@ -396,14 +396,15 @@ footer p {
   <div class="sidebar">
     <div class="sidebar-header">
       <h2>Eli.Proprete</h2>
-    </div>
-    <ul class="sidebar-links">
-      <li><a href="#">Dashboard</a></li>
-      <li><a href="clients.php">Clients</a></li>
-      <li><a href="messages.php">Messages</a></li>
-      <li><a href="homepage.php">Home</a></li>
-    </ul>
-  </div>
+      </div>
+<ul class="sidebar-links">
+  <li><a href="#">Tableau de bord</a></li>
+  <li><a href="clients.php">Clients</a></li>
+  <li><a href="messages.php">Messages</a></li>
+  <li><a href="homepage.php">Accueil</a></li>
+</ul>
+</div>
+
 
   <!-- Main Content -->
   <div class="main-content">
@@ -423,28 +424,29 @@ if ($message_result->num_rows > 0) {
     $message_count = $row['message_count'];
 }
 ?>
-    <!-- Overview Section -->
+<!-- Section Vue d'ensemble -->
 <section class="overview">
 <div class="project-container">
-<div id="total-projects">1 Total Project</div>
+<div id="total-projects">1 Projet au total</div>
 
-    <!-- More project items -->
+    <!-- Plus d'éléments de projet -->
 </div>
   <div class="overview-item">
-    <h3>Total Clients</h3>
+    <h3>Total des clients</h3>
     <p>120</p>
   </div>
   <div class="overview-item">
   <a href="messages.php">
     <h3>Messages</h3>
     </a>
-    <p><?php echo $message_count; ?></p> <!-- Dynamically display message count -->
+    <p><?php echo $message_count; ?></p> <!-- Affichage dynamique du nombre de messages -->
   </div>
   <div class="overview-item">
-    <h3>Tasks</h3>
+    <h3>Tâches</h3>
     <p>5</p>
   </div>
 </section>
+
 
 
 <script>
@@ -461,19 +463,20 @@ if ($message_result->num_rows > 0) {
 
     <!-- Upload Section -->
     <section class="upload-section">
-      <h2>Upload Work</h2>
-      <form action="upload.php" method="POST" enctype="multipart/form-data">
-        <input type="text" name="title" placeholder="Project Title" required>
-        <textarea name="description" rows="4" placeholder="Project Description"></textarea>
-        <input type="file" name="image" accept="image/*" required>
-        <button type="submit">Upload Project</button>
-      </form>
-    </section>
+  <h2>Télécharger un Projet</h2>
+  <form action="upload.php" method="POST" enctype="multipart/form-data">
+    <input type="text" name="title" placeholder="Titre du projet" required>
+    <textarea name="description" rows="4" placeholder="Description du projet"></textarea>
+    <input type="file" name="image" accept="image/*" required>
+    <button type="submit">Télécharger le projet</button>
+  </form>
+</section>
 
-    <!-- Projects Section -->
-    <section class="projects-section">
-      <h2>Uploaded Projects</h2>
-      <div class="projects">
+<!-- Section des Projets -->
+<section class="projects-section">
+  <h2>Projets Téléchargés</h2>
+  <div class="projects">
+
         <?php
         // Fetch all uploaded projects from the database
         $result = $conn->query("SELECT * FROM gallery");

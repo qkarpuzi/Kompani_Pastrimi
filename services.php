@@ -195,90 +195,91 @@
   <nav class="navbar">
     <div class="logo">Eli.Proprete</div>
     <ul class="nav-links">
-      <li><a href="homepage.php">Home</a></li>
-      <li><a href="services.php">Services</a></li>
-      <li><a href="our_work.php">Our Work</a></li>
-      <li><a href="contact.php">Contact</a></li>
+  <li><a href="homepage.php">Accueil</a></li>
+  <li><a href="services.php">Services</a></li>
+  <li><a href="our_work.php">Nos Travaux</a></li>
+  <li><a href="contact.php">Contact</a></li>
+</ul>
+<div class="social-icons">
+  <i class="fab fa-facebook"></i>
+  <i class="fab fa-twitter"></i>
+  <i class="fab fa-linkedin"></i>
+</div>
+</nav>
+
+<section class="services">
+  <div class="service-box">
+    <i class="fas fa-water"></i>
+    <h3>Nettoyage de Salle de Bain</h3>
+    <p>Services de nettoyage approfondi et hygiénique pour les salles de bain.</p>
+    <button class="read-more-btn" onclick="toggleInfo(this)">Lire la suite</button>
+    <p class="additional-info" style="display:none;">
+      Nos services de nettoyage de salle de bain incluent le nettoyage et la désinfection des toilettes, le nettoyage des lavabos et comptoirs, le frottement des douches et baignoires, le nettoyage des miroirs et vitres, le nettoyage des sols et la désinfection des zones fréquemment touchées.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <i class="fas fa-broom"></i>
+    <h3>Nettoyage Général</h3>
+    <p>Services de nettoyage complet pour divers espaces.</p>
+    <button class="read-more-btn" onclick="toggleInfo(this)">Lire la suite</button>
+    <p class="additional-info" style="display:none;">
+      Services de nettoyage proposés pour : Bureaux, Locaux/Cliniques (pharmacie, opticien, agence de voyage), Escalier, Petit magasin, Maison, Appartement.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <i class="fas fa-spray-can"></i>
+    <h3>Nettoyage Spécialisé</h3>
+    <p>Nettoyage expert pour des besoins uniques et spécialisés.</p>
+    <button class="read-more-btn" onclick="toggleInfo(this)">Lire la suite</button>
+    <p class="additional-info" style="display:none;">
+      Nous fournissons un nettoyage spécialisé pour les espaces industriels, les établissements médicaux et plus encore.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <i class="fas fa-building"></i>
+    <h3>Nettoyage de Bureau</h3>
+    <p>Gardez votre espace de travail propre et professionnel.</p>
+    <button class="read-more-btn" onclick="toggleInfo(this)">Lire la suite</button>
+    <p class="additional-info" style="display:none;">
+      Nos services de nettoyage de bureau garantissent un espace de travail propre et organisé, incluant le dépoussiérage, l'aspiration et la désinfection des surfaces.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <i class="fas fa-home"></i>
+    <h3>Nettoyage de Maison</h3>
+    <p>Services de nettoyage complets pour une maison éclatante de propreté.</p>
+    <button class="read-more-btn" onclick="toggleInfo(this)">Lire la suite</button>
+    <p class="additional-info" style="display:none;">
+      Nos services de nettoyage de maison incluent le dépoussiérage, l'aspiration, le lavage des sols, ainsi que le nettoyage et la désinfection des surfaces, ainsi que le nettoyage des zones fréquemment touchées.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <i class="fas fa-couch"></i>
+    <h3>Nettoyage de Tapis et Canapés</h3>
+    <p>Nettoyage expert pour les tapis et les tissus d'ameublement.</p>
+    <button class="read-more-btn" onclick="toggleInfo(this)">Lire la suite</button>
+    <p class="additional-info" style="display:none;">
+      Nous proposons des services de nettoyage en profondeur pour les tapis et les canapés, en veillant à ce qu'ils paraissent frais et comme neufs.
+    </p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Eli.Proprete. Tous droits réservés.</p>
+    <ul class="footer-links">
+      <li><a href="#">Politique de confidentialité</a></li>
+      <li><a href="#">Conditions d'utilisation</a></li>
+      <li><a href="#">FAQ</a></li>
     </ul>
-    <div class="social-icons">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-linkedin"></i>
-    </div>
-  </nav>
+  </div>
+</footer>
 
-  <section class="services">
-    <div class="service-box">
-      <i class="fas fa-water"></i>
-      <h3>Bathroom Cleaning</h3>
-      <p>Thorough and hygienic bathroom cleaning services.</p>
-      <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
-      <p class="additional-info" style="display:none;">
-        Our bathroom cleaning services include toilet cleaning and disinfection, sink and countertop cleaning, shower and bathtub scrubbing, mirror and glass cleaning, floor cleaning and sanitization, and cleaning and disinfecting high-touch areas.
-      </p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-broom"></i>
-      <h3>General Cleaning</h3>
-      <p>Comprehensive cleaning services for various spaces.</p>
-      <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
-      <p class="additional-info" style="display:none;">
-        Cleaning services offered for: Office, Premises/clinic (pharmacy, optician agency, travel agency), Staircase, Small shop, House, Apartment.
-      </p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-spray-can"></i>
-      <h3>Specialized Cleaning</h3>
-      <p>Expert cleaning for unique and specialized needs.</p>
-      <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
-      <p class="additional-info" style="display:none;">
-        We provide specialized cleaning for industrial spaces, medical facilities, and more.
-      </p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-building"></i>
-      <h3>Office Cleaning</h3>
-      <p>Keep your workspace clean and professional.</p>
-      <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
-      <p class="additional-info" style="display:none;">
-        Our office cleaning services ensure a tidy and organized workspace, including dusting, vacuuming, and sanitizing surfaces.
-      </p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-home"></i>
-      <h3>House Cleaning</h3>
-      <p>Comprehensive house cleaning services for a sparkling clean home.</p>
-      <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
-      <p class="additional-info" style="display:none;">
-        Our house cleaning services include dusting, vacuuming, mopping, and sanitizing surfaces, as well as cleaning and disinfecting high-touch areas.
-      </p>
-    </div>
-
-    <div class="service-box">
-      <i class="fas fa-couch"></i>
-      <h3>Carpet and Sofa Cleaning</h3>
-      <p>Expert cleaning for carpets and upholstery.</p>
-      <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
-      <p class="additional-info" style="display:none;">
-        We provide deep cleaning services for carpets and sofas, ensuring they look fresh and new.
-      </p>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2025 Eli.Proprete. All rights reserved.</p>
-      <ul class="footer-links">
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">FAQs</a></li>
-      </ul>
-    </div>
-  </footer>
 
   <script>
     function toggleInfo(button) {
