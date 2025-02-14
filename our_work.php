@@ -66,7 +66,7 @@ $result = $conn->query($sql);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Work</title>
+  <title>Notre travail</title>
   <link rel="stylesheet" href="../Cleaning Company/assests/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -237,14 +237,14 @@ $result = $conn->query($sql);
 <body>
 
 <nav class="navbar">
-  <div class="logo">WeClean</div>
+  <div class="logo">Eli.Proprete</div>
   <ul class="nav-links">
-    <li><a href="homepage.php">Home</a></li>
+    <li><a href="homepage.php">Accueil</a></li>
     <li><a href="services.php">Services</a></li>
-    <li><a href="our_work.php" class="active">Our Work</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a href="contact.php">Contact</a></li>
   </ul>
 </nav>
+
 
 <section class="gallery">
   <div class="gallery-container">
@@ -263,12 +263,12 @@ $result = $conn->query($sql);
                     data-title="' . $title . '" 
                     data-description="' . $description . '" 
                     data-image="' . $imageUrl . '">
-                    Read More
+                    En savoir plus
                   </button>';
             echo '</div>';
         }
     } else {
-        echo "<p>No work has been uploaded yet. Be the first to add some!</p>";
+        echo "<p>Aucun travail n'a encore été téléchargé !</p>";
     }
     ?>
   </div>

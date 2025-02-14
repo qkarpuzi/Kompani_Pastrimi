@@ -8,12 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    /* General Styles */
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       color: #333;
-      background-color: #f9f9f9;
+      background-color:rgb(249, 249, 249);
     }
 
     a {

@@ -12,11 +12,12 @@
   <nav class="navbar">
     <div class="logo">Eli.Proprete</div>
     <ul class="nav-links">
-      <li><a href="homepage.php">Home</a></li>
-      <li><a href="services.php">Services</a></li>
-      <li><a href="our_work.php">Our Work</a></li>
-      <li><a href="contact.php">Contact</a></li>
-    </ul>
+  <li><a href="homepage.php">Accueil</a></li>
+  <li><a href="services.php">Services</a></li>
+  <li><a href="our_work.php">Nos Réalisations</a></li>
+  <li><a href="contact.php">Contact</a></li>
+</ul>
+
     <div class="social-icons">
       <i class="fab fa-facebook"></i>
       <i class="fab fa-twitter"></i>
@@ -26,41 +27,41 @@
 
   <header class="hero">
     <div class="hero-content">
-      <h1>Clean</h1>
-      <p>An ultimate cleaning template for your business</p>
+      <h1>Eli.Proprete</h1>
+      <p>Apportant éclat et brillance à chaque espace ! ✨🏡</p>
     </div>
   </header>
   <!-- SERVICES SECTION -->
 <section id="services" class="services">
 <div class="service-box">
-    <i class="fas fa-water"></i> <!-- Plumbing Icon -->
-    <h3>Bathroom Cleaning</h3>
-    <p>Thorough and hygienic bathroom cleaning services.</p>
-    <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
+    <i class="fas fa-water"></i>
+    <h3>Nettoyage SDB</h3>
+    <p>Nettoyage de salle de bain hygiénique.</p>
+    <button class="read-more-btn" onclick="toggleInfo(this)">En savoir plus</button>
     <p class="additional-info" style="display:none;">
-      Our bathroom cleaning services include toilet cleaning and disinfection, sink and countertop cleaning, shower and bathtub scrubbing, mirror and glass cleaning, floor cleaning and sanitization, and cleaning and disinfecting high-touch areas.
-      <br>
       Nos services de nettoyage de salle de bain comprennent le nettoyage et la désinfection des toilettes, le nettoyage de l'évier et du plan de travail, le frottement de la douche et de la baignoire, le nettoyage des miroirs et des surfaces en verre, le nettoyage et la désinfection des sols, ainsi que le nettoyage et la désinfection des zones à fort contact.
     </p>
-  </div>
+</div>
+
   
-  <div class="service-box">
-    <i class="fas fa-broom"></i> <!-- Cleaning Icon -->
-    <h3>Cleaning</h3>
-    <p>Spotless and detailed cleaning services.</p>
-    <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
-    <p class="additional-info" style="display:none;">Our cleaning includes deep cleaning, dusting, and sanitization.</p>
-  </div>
+<div class="service-box">
+    <i class="fas fa-broom"></i>
+    <h3>Nettoyage</h3>
+    <p>Services de nettoyage impeccables et détaillés.</p>
+    <button class="read-more-btn" onclick="toggleInfo(this)">Lire la suite</button>
+    <p class="additional-info" style="display:none;">Notre nettoyage comprend un nettoyage en profondeur, un dépoussiérage et une désinfection.</p>
+</div>
 
 
 
-  <div class="service-box">
-    <i class="fas fa-spray-can"></i> <!-- Specialized Cleaning Icon -->
-    <h3>Specialized Cleaning</h3>
-    <p>Expert cleaning for unique and specialized needs.</p>
-    <button class="read-more-btn" onclick="toggleInfo(this)">Read More</button>
-    <p class="additional-info" style="display:none;">We provide specialized cleaning for industrial spaces, medical facilities, and more.</p>
-  </div>
+
+<div class="service-box">
+    <i class="fas fa-spray-can"></i>
+    <h3>Nettoyage Spécialisé</h3>
+    <p>Nettoyage expert pour des besoins uniques et spécialisés.</p>
+    <button class="read-more-btn" onclick="toggleInfo(this)">Lire la suite</button>
+    <p class="additional-info" style="display:none;">Nous proposons un nettoyage spécialisé pour les espaces industriels, les établissements médicaux, et plus encore.</p>
+</div>
 </section>
 
 
@@ -70,15 +71,15 @@
   <div class="container">
     <div class="about-content">
       <div class="text">
-        <h2>About Us</h2>
+        <h2>À Propos de Nous</h2>
         <p>
-          Hello, I am Karpuz-Avdiu Mexhide, an independent housekeeper with 15 years of experience. For a spotless interior and peace of mind, contact me if you are interested in the Grand Nancy area. I am punctual, detail-oriented, and respect eco-friendly products. If you have any questions, please contact me at the provided phone number. I respond quickly.
+          Bonjour, je suis Karpuzi-Avdiu Mexhide, une femme de ménage indépendante avec 15 ans d'expérience. Pour un intérieur impeccable et une tranquillité d'esprit, contactez-moi si vous êtes intéressé dans la région de Grand Nancy. Je suis ponctuelle, minutieuse et je respecte les produits écologiques. Si vous avez des questions, veuillez me contacter au numéro de téléphone fourni. Je réponds rapidement.
         </p>
-        <h3>Contact Information:</h3>
+        <h3>Informations de Contact :</h3>
         <ul>
-          <li><strong>Name:</strong> Karpuz-Avdiu Mexhide</li>
-          <li><strong>Email:</strong> <a href="mailto:eli.proprete@outlook.fr">eli.proprete@outlook.fr</a></li>
-          <li><strong>Phone:</strong> 06.66.30.09.62</li>
+          <li><strong>Nom :</strong> Karpuz-Avdiu Mexhide</li>
+          <li><strong>Email :</strong> <a href="mailto:eli.proprete@outlook.fr">eli.proprete@outlook.fr</a></li>
+          <li><strong>Téléphone :</strong> 06.66.30.09.62</li>
         </ul>
       </div>
       <div class="image">
@@ -89,62 +90,64 @@
 </section>
 
 
+
 <section class="cleaning-services">
     <div class="hero-section">
-        <h3 class="sub-title">Why Choose Us?</h3>
-        <h1 class="main-title">We will make any place clean and tidy.</h1>
+        <h3 class="sub-title">Pourquoi Choisir Nos Services ?</h3>
+        <h1 class="main-title">Nous rendrons chaque endroit propre et soigné.</h1>
         <p class="description">
-            Our team of experts is dedicated to making your space spotless. With top-quality 
-            products and professional techniques, we ensure a fresh and clean environment for 
-            your home or office.
+            Notre équipe d'experts est dédiée à rendre votre espace impeccable. Avec des produits de qualité supérieure 
+            et des techniques professionnelles, nous assurons un environnement frais et propre pour 
+            votre maison ou votre bureau.
         </p>
         <div class="features">
             <div class="feature-box">
                 <i class="fas fa-broom"></i>
-                <p>Over 2500+ Services</p>
+                <p>Plus de 2500+ Services</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-leaf"></i>
-                <p>Eco-Friendly Products</p>
+                <p>Produits Écologiques</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-smile"></i>
-                <p>100% Satisfaction</p>
+                <p>Satisfaction Garantie à 100%</p>
             </div>
             <div class="feature-box">
                 <i class="fas fa-dollar-sign"></i>
-                <p>Cost-Effective</p>
+                <p>Coût Abordable</p>
             </div>
         </div>
     </div>
 
     <div class="stats-section">
-        <h3 class="company-title">Company Statistics</h3>
-        <h2 class="stats-heading">We Completed 2500+ Cleaning Services</h2>
+        <h3 class="company-title">Statistiques de l'Entreprise</h3>
+        <h2 class="stats-heading">Nous avons réalisé plus de 2500 Services de Nettoyage</h2>
         <div class="stats-container">
             <div class="stat-box">
                 <i class="fas fa-users"></i>
                 <h3>350+</h3>
-                <p>Client Satisfaction</p>
+                <p>Satisfaction des Clients</p>
             </div>
             <div class="stat-box">
                 <i class="fas fa-building"></i>
                 <h3>500+</h3>
-                <p>Businesses Served</p>
+                <p>Entreprises Servies</p>
             </div>
             <div class="stat-box">
                 <i class="fas fa-calendar-alt"></i>
                 <h3>15+</h3>
-                <p>Years of Service</p>
+                <p>Années de Service</p>
             </div>
             <div class="stat-box">
                 <i class="fas fa-users-cog"></i>
                 <h3>10+</h3>
-                <p>Professional Staff</p>
+                <p>Personnel Professionnel</p>
             </div>
         </div>
     </div>
 </section>
+
 
 
 
@@ -840,10 +843,10 @@ a {
         const additionalInfo = button.nextElementSibling;
         if (additionalInfo.style.display === "none") {
             additionalInfo.style.display = "block";
-            button.textContent = "Read Less";
+            button.textContent = "Lire moins";
         } else {
             additionalInfo.style.display = "none";
-            button.textContent = "Read More";
+            button.textContent = "Lire la suite";
         }
     }
 </script>
@@ -852,41 +855,33 @@ a {
   
   
 
-  <section class="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial">
-      <p>"The cleaning service was top-notch! Highly recommend!"</p>
-      <h4>- Sarah J.</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Quick and reliable plumbing services. Thank you!"</p>
-      <h4>- Michael K.</h4>
-    </div>
-  </section>
+
 
 
   <!-- HTML: Add this part where you want the message input to appear -->
-<div class="message-input">
-    <h3>Send Us a Message</h3>
+  <div class="message-input">
+    <h3>Envoyez-nous un message</h3>
     <form action="send_message.php" method="POST">
-        <textarea name="message" rows="4" placeholder="Enter your message..." required></textarea>
-        <button type="submit">Send</button>
+        <textarea name="message" rows="4" placeholder="Entrez votre message..." required></textarea>
+        <button type="submit">Envoyer</button>
     </form>
 </div>
 
 
 
 
-  <footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2025 WeClean. All rights reserved.</p>
-      <ul class="footer-links">
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">FAQs</a></li>
-      </ul>
-    </div>
-  </footer>
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Eli.Propreté. Tous droits réservés.</p>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Politique de confidentialité</a></li>
+      <li><a href="services.php">Conditions d'utilisation</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </div>
+</footer>
+
 
   <script>
     const menu = document.querySelector('.hamburger-menu');

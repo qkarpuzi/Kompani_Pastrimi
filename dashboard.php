@@ -36,6 +36,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
         }
     }
 }
+
+$sql = "SELECT COUNT(*) as total FROM clients"; 
+$result = mysqli_query($conn, $sql);
+
+if ($result) {
+    $row = mysqli_fetch_assoc($result);
+    $clients_count = $row['total']; // Assign the count value
+} else {
+    $clients_count = 0; // Default to 0 if the query fails
+}
+
+$clients_count = $clients_count ?? 0;
 ?>
 
 <!DOCTYPE html>
@@ -431,19 +443,17 @@ if ($message_result->num_rows > 0) {
 
     <!-- Plus d'éléments de projet -->
 </div>
-  <div class="overview-item">
+<div class="overview-item">
+  <a href="clients.php">
     <h3>Total des clients</h3>
-    <p>120</p>
-  </div>
+    <p><?php echo $clients_count; ?></p>
+  </a>
+</div>
   <div class="overview-item">
   <a href="messages.php">
     <h3>Messages</h3>
     </a>
     <p><?php echo $message_count; ?></p> <!-- Affichage dynamique du nombre de messages -->
-  </div>
-  <div class="overview-item">
-    <h3>Tâches</h3>
-    <p>5</p>
   </div>
 </section>
 
