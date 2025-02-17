@@ -64,7 +64,7 @@ $conn->close();
     <!-- Sidebar -->
     <div class="sidebar">
    
-        <a href="dashboard.php">Go Back</a>
+        <a href="dashboard.php">Retourner</a>
        
     </div>
 

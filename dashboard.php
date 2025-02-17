@@ -50,6 +50,11 @@ if ($result) {
 $clients_count = $clients_count ?? 0;
 ?>
 
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
