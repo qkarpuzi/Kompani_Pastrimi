@@ -200,15 +200,17 @@
 
   <!-- Contact Section -->
   <div class="contact-section">
-    <h2>Contactez-nous</h2>
-    <p>Nous sommes à votre écoute pour répondre à vos questions et vous accompagner dans vos projets.</p>
-    <form class="contact-form" method="POST" action="">
-      <input type="text" id="name" name="name" placeholder="Votre nom" required>
-      <input type="email" id="email" name="email" placeholder="Votre email" required>
-      <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
-      <button type="submit">Envoyer le message</button>
-    </form>
-  </div>
+  <h2>Contactez-nous</h2>
+  <p>Nous sommes à votre écoute pour répondre à vos questions et vous accompagner dans vos projets.</p>
+  <form class="contact-form" method="POST" action="https://api.web3forms.com/submit">
+    <input type="hidden" name="access_key" value="861f9e81-7450-4719-89a5-f01f2124b482">
+    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+    <input type="email" id="email" name="email" placeholder="Votre email" required>
+    <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+    <button type="submit">Envoyer le message</button>
+  </form>
+</div>
+
 
   <!-- Footer -->
   <div class="footer">
