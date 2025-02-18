@@ -286,10 +286,10 @@
       const additionalInfo = button.nextElementSibling;
       if (additionalInfo.style.display === "none") {
         additionalInfo.style.display = "block";
-        button.textContent = "Read Less";
+        button.textContent = "Lire moins";
       } else {
         additionalInfo.style.display = "none";
-        button.textContent = "Read More";
+        button.textContent = "En savoir plus";
       }
     }
   </script>
