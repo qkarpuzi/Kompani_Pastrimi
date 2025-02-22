@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cleaning Company</title>
   <!-- Logon E kompanis -->
-  <link rel="shortcut icon" href="" type="image/x-icon">
+  <link rel="shortcut icon" href="Eli.png" type="image/x-icon">
   <link rel="stylesheet" href="../Cleaning Company/assests/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -732,7 +732,7 @@ a {
 }
 
 .hero-section {
-    background:rgb(60, 216, 135);
+    background:rgb(147, 234, 206);
     padding: 50px 20px;
 }
 
