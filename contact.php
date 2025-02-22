@@ -194,7 +194,7 @@
   <div class="navbar">
     <div class="logo">Eli.Propreté</div>
     <ul class="nav-links">
-      <li><a href="homepage.php">Accueil</a></li>
+      <li><a href="index.php">Accueil</a></li>
       <li><a href="our_work.php">Nos Travaux</a></li>
       <li><a href="services.php">Services</a></li>
     </ul>

@@ -420,7 +420,7 @@ footer p {
   <li><a href="#">Tableau de bord</a></li>
   <li><a href="clients.php">Clients</a></li>
   <li><a href="messages.php">Messages</a></li>
-  <li><a href="homepage.php">Accueil</a></li>
+  <li><a href="index.php">Accueil</a></li>
 </ul>
 </div>
 
