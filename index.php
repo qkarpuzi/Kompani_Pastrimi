@@ -11,21 +11,69 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Eli.Proprete</div>
-    <ul class="nav-links">
-  <li><a href="index.php">Accueil</a></li>
-  <li><a href="services.php">Services</a></li>
-  <li><a href="our_work.php">Nos Réalisations</a></li>
-  <li><a href="contact.php">Contact</a></li>
-</ul>
+<nav class="navbar">
+  <div class="logo">Eli.Proprete</div>
+  <!-- Hamburger Menu Icon -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <!-- Navigation Links -->
+  <ul class="nav-links">
+    <li><a href="index..php">Accueil</a></li>
+    <li><a href="services.php">Services</a></li>
+    <li><a href="our_work.php">Nos Réalisations</a></li>
+    <li><a href="contact.php">Contact</a></li>
+  </ul>
+</nav>
 
-    <div class="social-icons">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-twitter"></i>
-      <i class="fab fa-linkedin"></i>
-    </div>
-  </nav>
+<style>
+/* Hamburger Menu */
+.hamburger {
+  display: none; /* Hide by default on larger screens */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger on small screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links by default on small screens */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on your navbar height */
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0; /* Reduced padding */
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show nav links when active */
+  }
+
+  .nav-links li {
+    margin: 8px 0; /* Reduced margin */
+  }
+
+  .nav-links li a {
+    font-size: 14px; /* Smaller font size for mobile */
+    padding: 8px 20px; /* Reduced padding */
+  }
+}
+</style>
+
+<script>
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}
+</script>
 
   <header class="hero">
     <div class="hero-content">
