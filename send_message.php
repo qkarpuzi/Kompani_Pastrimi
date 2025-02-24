@@ -1,10 +1,6 @@
 <?php
-// Database connection
-$conn = new mysqli("localhost", "root", "", "kompani_pastrimi");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Include the existing database connection file
+include_once 'db_connection.php';  // Adjust the path if needed
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get the message from the form
@@ -25,3 +21,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
+

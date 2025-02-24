@@ -1,10 +1,6 @@
 <?php
-// Database connection
-$conn = new mysqli("localhost", "root", "", "kompani_pastrimi");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Include the existing database connection file
+include_once 'db_connection.php';  // Ensure the path to db_connection.php is correct
 
 // Handle message deletion
 if (isset($_GET['delete'])) {
@@ -18,6 +14,7 @@ if (isset($_GET['delete'])) {
 $result = $conn->query("SELECT id, message_content, timestamp FROM messages ORDER BY timestamp DESC");
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +22,7 @@ $result = $conn->query("SELECT id, message_content, timestamp FROM messages ORDE
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Messages Dashboard</title>
   <!-- Logon E kompanis -->
-  <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
+  <link rel="shortcut icon" href="mexhide.png" type="image/x-icon">
   <style>
    body {
   font-family: Arial, sans-serif;

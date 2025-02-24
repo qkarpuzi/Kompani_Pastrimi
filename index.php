@@ -5,14 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cleaning Company</title>
   <!-- Logon E kompanis -->
-  <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
+  <link rel="shortcut icon" href="mexhide.png" type="image/x-icon">
   <link rel="stylesheet" href="../Cleaning Company/assests/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 <nav class="navbar">
-  <div class="logo">Eli.Proprete</div>
+<div class="logo">
+<div class="logo-container">
+<div class="logo-container">
+  <img src="mexhide.png" alt="Logo" class="logo">
+  <div class="logo-text">
+    <div class="name">Eli.Proprete</div>
+    <div class="slogan">Mexhide Karpuzi /EI</div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
   <!-- Hamburger Menu Icon -->
   <div class="hamburger" onclick="toggleMenu()">
     <i class="fas fa-bars"></i>
@@ -27,6 +40,33 @@
 </nav>
 
 <style>
+.logo-container {
+  display: flex;
+  align-items: center; /* Align logo and text vertically */
+}
+
+.logo {
+  width: 50px; /* Adjust the logo size */
+  height: auto;
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+  font-size: 14px; /* Adjust font size for the name and slogan */
+}
+
+.name {
+  font-weight: bold;
+  font-size: 16px; /* Bigger font size for the name */
+}
+
+.slogan {
+  font-style: italic;
+  font-size: 12px; /* Smaller font size for the slogan */
+  color: #777; /* Light color for the slogan */
+}
+
+
 /* Hamburger Menu */
 .hamburger {
   display: none; /* Hide by default on larger screens */
@@ -191,8 +231,8 @@ function toggleMenu() {
             </div>
             <div class="stat-box">
                 <i class="fas fa-users-cog"></i>
-                <h3>10+</h3>
-                <p>Personnel Professionnel</p>
+                <h3>Personnel</h3>
+                <p> Professionnel</p>
             </div>
         </div>
     </div>

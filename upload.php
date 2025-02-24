@@ -1,10 +1,6 @@
 <?php
-// Database connection
-$conn = new mysqli("localhost", "root", "", "kompani_pastrimi");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Include the existing database connection file
+include_once 'db_connection.php';  // Make sure the path to db_connection.php is correct
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = $_POST['title'];

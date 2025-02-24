@@ -1,10 +1,6 @@
 <?php
-// Database connection
-$conn = new mysqli("localhost", "root", "", "kompani_pastrimi");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Include the existing database connection file
+include_once 'db_connection.php';  // Ensure the path to db_connection.php is correct
 
 // Delete functionality
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
@@ -37,16 +33,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
     }
 }
 
+// Fetch the total number of clients
 $sql = "SELECT COUNT(*) as total FROM clients"; 
-$result = mysqli_query($conn, $sql);
+$result = $conn->query($sql);
 
 if ($result) {
-    $row = mysqli_fetch_assoc($result);
+    $row = $result->fetch_assoc();
     $clients_count = $row['total']; // Assign the count value
 } else {
     $clients_count = 0; // Default to 0 if the query fails
 }
 
+// Ensure $clients_count is always initialized
 $clients_count = $clients_count ?? 0;
 ?>
 
@@ -56,10 +54,8 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
 }
-
-
-
 ?>
+
 
 
 
@@ -78,7 +74,7 @@ if (!isset($_SESSION['user_id'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
   <!-- Logon E kompanis -->
-  <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
+  <link rel="shortcut icon" href="mexhide.png" type="image/x-icon">
   <link rel="stylesheet" href="../Cleaning Company/assests/dashboard.css">
   
   <style>

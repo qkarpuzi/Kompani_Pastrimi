@@ -1,16 +1,6 @@
 <?php
-// Establish database connection
-$servername = "localhost";
-$username = "root"; // Replace with your DB username
-$password = "";     // Replace with your DB password
-$dbname = "kompani_pastrimi";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Include the existing database connection file
+include_once 'db_connection.php';  // Ensure the path to db_connection.php is correct
 
 // Handle file upload
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
@@ -23,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
         mkdir($targetDir, 0777, true);
     }
 
-    $imageName = basename($_FILES['image']['name']);
+    $imageName = preg_replace("/[^a-zA-Z0-9\._-]/", "", basename($_FILES['image']['name']));
     $fileType = strtolower(pathinfo($imageName, PATHINFO_EXTENSION));
 
     // Allowed file types
@@ -32,6 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {
     // Check if the file type is allowed
     if (!in_array($fileType, $allowedTypes)) {
         echo "<script>alert('Only JPG, JPEG, PNG, and GIF files are allowed.');</script>";
+    } elseif ($_FILES['image']['size'] > 5000000) { // 5MB max size
+        echo "<script>alert('File is too large. Max size: 5MB.');</script>";
     } else {
         // Rename the image to avoid conflicts
         $newImageName = time() . "_" . $imageName;
@@ -61,6 +53,7 @@ $sql = "SELECT * FROM gallery ORDER BY uploaded_at DESC";
 $result = $conn->query($sql);
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,7 +61,7 @@ $result = $conn->query($sql);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Notre travail</title>
   <!-- Logon E kompanis -->
-  <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
+  <link rel="shortcut icon" href="mexhide.png" type="image/x-icon">
   <link rel="stylesheet" href="../Cleaning Company/assests/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

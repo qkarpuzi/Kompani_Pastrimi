@@ -1,16 +1,6 @@
 <?php
-$servername = "localhost";
-$username = "root"; // Change if needed
-$password = ""; // Change if needed
-$dbname = "kompani_pastrimi";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+// Include the existing database connection file
+include_once 'db_connection.php';  // Ensure the path to db_connection.php is correct
 
 // ADD CLIENT
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_client"])) {
@@ -48,8 +38,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete_client"])) {
 // Fetch all clients
 $clients = $conn->query("SELECT * FROM clients");
 
+// Close the connection
 $conn->close();
 ?>
+
 
 
 <!DOCTYPE html>
@@ -59,7 +51,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clients Dashboard</title>
     <!-- Logon E kompanis -->
-    <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="mexhide.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
