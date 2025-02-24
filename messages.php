@@ -25,7 +25,7 @@ $result = $conn->query("SELECT id, message_content, timestamp FROM messages ORDE
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Messages Dashboard</title>
   <!-- Logon E kompanis -->
-  <link rel="shortcut icon" href="Eli.png" type="image/x-icon">
+  <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
   <style>
    body {
   font-family: Arial, sans-serif;

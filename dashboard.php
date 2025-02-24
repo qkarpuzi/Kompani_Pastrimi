@@ -50,6 +50,22 @@ if ($result) {
 $clients_count = $clients_count ?? 0;
 ?>
 
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+
+
+?>
+
+
+
+
+
+
 
 
 
@@ -62,12 +78,10 @@ $clients_count = $clients_count ?? 0;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
   <!-- Logon E kompanis -->
-  <link rel="shortcut icon" href="Eli.png" type="image/x-icon">
+  <link rel="shortcut icon" href="logo.webp" type="image/x-icon">
   <link rel="stylesheet" href="../Cleaning Company/assests/dashboard.css">
+  
   <style>
-    
-    /* Your existing styles here */
-   /* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -77,7 +91,7 @@ $clients_count = $clients_count ?? 0;
 /* Body and Layout */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f7f9; /* Light neutral background */
+  background-color: #f4f7f9;
   color: #333333;
   line-height: 1.6;
   display: flex;
@@ -88,7 +102,7 @@ body {
 /* Sidebar Styling */
 .sidebar {
   width: 240px;
-  background-color: #2c3e50; /* Dark blue-gray for a professional feel */
+  background-color: #2c3e50;
   color: #ffffff;
   height: 100vh;
   padding: 40px 20px;
@@ -100,6 +114,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   border-radius: 0 20px 20px 0;
+  z-index: 1000;
 }
 
 /* Sidebar Header */
@@ -124,7 +139,7 @@ body {
 
 .sidebar-links a {
   text-decoration: none;
-  color: #ecf0f1; /* Light gray text */
+  color: #ecf0f1;
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -150,7 +165,7 @@ body {
 
 /* Main Content Area */
 .main-content {
- background-color: skyblue;
+  background-color: skyblue;
   margin-left: 240px;
   padding: 40px;
   width: calc(100% - 240px);
@@ -252,61 +267,6 @@ body {
 }
 
 /* Project Section */
-/* Overview Section Styles */
-.overview {
-  margin-top: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-/* Overview Item Styling */
-.overview-item {
-  flex: 1 1 calc(33.333% - 20px); /* Three items in a row */
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.overview-item h3 {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.overview-item p {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-.overview-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Project Count Section */
-#total-projects {
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 10px;
-  text-align: center;
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  width: 100%;
-}
-
 .project-container {
   width: 100%;
   margin-top: 20px;
@@ -366,39 +326,65 @@ footer p {
   color: rgba(236, 240, 241, 0.7);
 }
 
-/* Media Queries */
+/* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
   .main-content {
-    margin-left: 0;
-    width: 100%;
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .overview {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
 @media (max-width: 768px) {
   .sidebar {
-    width: 200px;
+    width: 180px;
+    padding: 20px 10px;
+  }
+
+  .main-content {
+    margin-left: 180px;
+    width: calc(100% - 180px);
+    padding: 20px;
+  }
+
+  .hero {
+    padding: 40px 20px;
   }
 
   .hero h1 {
     font-size: 28px;
   }
 
+  .hero p {
+    font-size: 16px;
+  }
+
   .overview {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .sidebar {
-    width: 180px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
   }
 
-  .hero h1 {
+  .overview-item {
+    padding: 20px;
+  }
+
+  .upload-section {
+    padding: 20px;
+  }
+
+  .upload-section h2 {
     font-size: 24px;
-  }
-
-  .overview {
-    grid-template-columns: 1fr;
   }
 
   .upload-section form input,
@@ -408,7 +394,63 @@ footer p {
   }
 }
 
-  </style>
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 20px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .overview {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-item {
+    padding: 15px;
+  }
+
+  .upload-section {
+    padding: 15px;
+  }
+
+  .upload-section h2 {
+    font-size: 20px;
+  }
+
+  .upload-section form input,
+  .upload-section form textarea,
+  .upload-section form button {
+    font-size: 12px;
+  }
+
+  .project-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-item img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+</style>
 </head>
 <body>
   <!-- Sidebar -->
